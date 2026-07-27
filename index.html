@@ -72,6 +72,24 @@
       line-height: 1.65;
     }
 
+    .site-nav {
+      display: flex;
+      gap: 18px;
+      margin: 0 0 22px;
+    }
+
+    .site-nav a {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
     .actions {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -159,6 +177,10 @@
     <p class="role">Industrial Automation · Applied AI · Engineering Systems</p>
 
     <p class="statement">I turn industrial complexity into practical, reliable and maintainable systems.</p>
+
+    <nav class="site-nav" aria-label="Website navigation">
+      <a href="about.html">About</a>
+    </nav>
 
     <div class="actions">
       <a class="button" href="https://github.com/AndrewAungKo" target="_blank" rel="noopener">GitHub</a>
