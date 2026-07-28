@@ -6,152 +6,7 @@
   <meta name="theme-color" content="#111827">
   <meta name="description" content="Insights from Aung (Andrew) Ko Oo on industrial automation, Applied AI and engineering systems.">
   <title>Insights — Aung (Andrew) Ko Oo</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #f3f4f6;
-      --card: #ffffff;
-      --text: #111827;
-      --muted: #6b7280;
-      --line: #e5e7eb;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      padding: 24px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
-
-    .page {
-      width: min(820px, 100%);
-      margin: 0 auto;
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      margin-bottom: 20px;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-
-    .nav a,
-    .insight a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    .nav a:hover,
-    .nav a:focus-visible,
-    .insight a:hover,
-    .insight a:focus-visible {
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-
-    .card {
-      padding: 40px;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      background: var(--card);
-      box-shadow: 0 18px 50px rgba(17, 24, 39, 0.08);
-    }
-
-    .eyebrow {
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2.4rem, 8vw, 4.2rem);
-      line-height: 1;
-      letter-spacing: -0.045em;
-    }
-
-    .intro {
-      max-width: 650px;
-      margin: 20px 0 34px;
-      color: var(--muted);
-      font-size: 1.08rem;
-      line-height: 1.7;
-    }
-
-    .series + .series {
-      margin-top: 38px;
-      padding-top: 34px;
-      border-top: 1px solid var(--line);
-    }
-
-    .series h2 {
-      margin: 0 0 8px;
-      font-size: 1.45rem;
-    }
-
-    .series-description {
-      margin: 0 0 22px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .insight {
-      padding: 20px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .insight:first-of-type { border-top: 0; }
-
-    .insight h3 {
-      margin: 0 0 8px;
-      font-size: 1.18rem;
-      line-height: 1.35;
-    }
-
-    .insight p {
-      margin: 0 0 12px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .footer {
-      margin-top: 24px;
-      color: var(--muted);
-      font-size: 0.82rem;
-      text-align: center;
-    }
-
-    @media (max-width: 560px) {
-      body { padding: 18px; }
-      .card { padding: 30px 24px; }
-      .nav { align-items: flex-start; }
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0b0f17;
-        --card: #111827;
-        --text: #f9fafb;
-        --muted: #9ca3af;
-        --line: #374151;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="page">
@@ -169,39 +24,21 @@
       <h1>Engineering ideas, developed in practice.</h1>
       <p class="intro">Thoughts on industrial automation, Applied AI and engineering systems. These posts are published on LinkedIn and collected here by theme.</p>
 
-      <section class="series" aria-labelledby="trust-contracts">
-        <h2 id="trust-contracts">Trust Contracts</h2>
-        <p class="series-description">A practical exploration of how industrial systems can publish information that downstream systems can understand and trust.</p>
+      <div class="series-list">
+        <section class="series" aria-labelledby="trust-contracts">
+          <h2 id="trust-contracts">Trust Contracts</h2>
+          <p class="series-description">A practical exploration of how industrial systems can publish information that downstream systems can understand and trust.</p>
+          <article class="insight" id="confidence-is-not-trust"><h3>Confidence Is Not Trust.</h3><p>Why a confidence score alone is not enough to establish trust in industrial measurements and higher-level systems.</p><a href="https://www.linkedin.com/posts/andrewaung_trustcontracts-industrialautomation-plc-share-7486960173861789696-aR0d" target="_blank" rel="noopener noreferrer">Read on LinkedIn →</a></article>
+          <article class="insight" id="stop-sending-sensor-values"><h3>Stop Sending Sensor Values. Start Sending Trust.</h3><p>An introduction to publishing industrial data with the context, quality and meaning required by downstream systems.</p><a href="https://www.linkedin.com/posts/andrewaung_trustcontracts-industrialautomation-plc-activity-7485132693421076480-NJI7" target="_blank" rel="noopener noreferrer">Read on LinkedIn →</a></article>
+        </section>
 
-        <article class="insight" id="confidence-is-not-trust">
-          <h3>Confidence Is Not Trust.</h3>
-          <p>Why a confidence score alone is not enough to establish trust in industrial measurements and higher-level systems.</p>
-          <a href="https://www.linkedin.com/posts/andrewaung_trustcontracts-industrialautomation-plc-share-7486960173861789696-aR0d" target="_blank" rel="noopener noreferrer">Read on LinkedIn →</a>
-        </article>
-
-        <article class="insight" id="stop-sending-sensor-values">
-          <h3>Stop Sending Sensor Values. Start Sending Trust.</h3>
-          <p>An introduction to publishing industrial data with the context, quality and meaning required by downstream systems.</p>
-          <a href="https://www.linkedin.com/posts/andrewaung_trustcontracts-industrialautomation-plc-activity-7485132693421076480-NJI7" target="_blank" rel="noopener noreferrer">Read on LinkedIn →</a>
-        </article>
-      </section>
-
-      <section class="series" aria-labelledby="industrial-ai-foundations">
-        <h2 id="industrial-ai-foundations">Industrial AI Foundations</h2>
-        <p class="series-description">Observations on how established automation systems connect with emerging industrial and human-centred technologies.</p>
-
-        <article class="insight" id="automation-digitalisation-ai-one-system">
-          <h3>Why Automation, Digitalisation, and AI Must Be Designed as One System</h3>
-          <p>Why automation, digitalisation and AI should be treated as connected layers rather than separate initiatives.</p>
-          <a href="https://www.linkedin.com/posts/andrewaung_industrialautomation-digitaltransformation-activity-7413527135417491456-akRO" target="_blank" rel="noopener noreferrer">Read on LinkedIn →</a>
-        </article>
-
-        <article class="insight" id="industry-5">
-          <h3>Are We Already in Industry 5.0?</h3>
-          <p>A reflection on whether practical industrial systems are already moving beyond the conventional Industry 4.0 model.</p>
-          <a href="https://www.linkedin.com/posts/andrewaung_industry50-industry40-industrialautomation-activity-7476061689105362944-Y6Sj" target="_blank" rel="noopener noreferrer">Read on LinkedIn →</a>
-        </article>
-      </section>
+        <section class="series" aria-labelledby="industrial-ai-foundations">
+          <h2 id="industrial-ai-foundations">Industrial AI Foundations</h2>
+          <p class="series-description">Observations on how established automation systems connect with emerging industrial and human-centred technologies.</p>
+          <article class="insight" id="automation-digitalisation-ai-one-system"><h3>Why Automation, Digitalisation, and AI Must Be Designed as One System</h3><p>Why automation, digitalisation and AI should be treated as connected layers rather than separate initiatives.</p><a href="https://www.linkedin.com/posts/andrewaung_industrialautomation-digitaltransformation-activity-7413527135417491456-akRO" target="_blank" rel="noopener noreferrer">Read on LinkedIn →</a></article>
+          <article class="insight" id="industry-5"><h3>Are We Already in Industry 5.0?</h3><p>A reflection on whether practical industrial systems are already moving beyond the conventional Industry 4.0 model.</p><a href="https://www.linkedin.com/posts/andrewaung_industry50-industry40-industrialautomation-activity-7476061689105362944-Y6Sj" target="_blank" rel="noopener noreferrer">Read on LinkedIn →</a></article>
+        </section>
+      </div>
     </section>
 
     <p class="footer">andrewaungko.github.io</p>
